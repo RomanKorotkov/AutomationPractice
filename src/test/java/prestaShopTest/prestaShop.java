@@ -16,7 +16,7 @@ public class prestaShop extends BasicPrestaShopUI {
         mainPage.clickOnLoginBtn();
         signInForm.fillRegisterForm();
         //assert
-        String header = signInForm.getTitleTextAfterRegistration();
+        String header = signInForm.getHeaderTextAfterRegistration();
         Assert.assertThat(header, CoreMatchers.containsString("MY ACCOUNT"));
     }
 
@@ -70,7 +70,6 @@ public class prestaShop extends BasicPrestaShopUI {
         mainPage.clickOnLoginBtn();
         loginPage.fillLogInForm("8767915@mail.com", "Qwerty0123456789");
         mainPage.clickOnContactUsBtn();
-        Assert.assertTrue(contactUs.getUrlContactUsPage());
         contactUs.fillContactForm();
         //assert
         String message = contactUs.getTextMessageAfterEmailSending();
@@ -88,7 +87,7 @@ public class prestaShop extends BasicPrestaShopUI {
         loginPage.fillLogInForm("8767915@mail.com", "Qwerty0123456789");
         myAccount.openOrder();
         //assert
-        String header = myAccount.getTextTitleOrders();
+        String header = myAccount.getTextHeaderOrders();
         Assert.assertThat(header, CoreMatchers.containsString("ORDER HISTORY"));
     }
 
@@ -103,7 +102,7 @@ public class prestaShop extends BasicPrestaShopUI {
         loginPage.fillLogInForm("8767915@mail.com", "Qwerty0123456789");
         myAccount.openCredit();
         //assert
-        String header = myAccount.getTextTitleCredit();
+        String header = myAccount.getTextHeaderCredit();
         Assert.assertThat(header, CoreMatchers.containsString("CREDIT SLIPS"));
     }
 
@@ -118,7 +117,7 @@ public class prestaShop extends BasicPrestaShopUI {
         loginPage.fillLogInForm("8767915@mail.com", "Qwerty0123456789");
         myAccount.openAddress();
         //assert
-        String header = myAccount.getTextTitleAddress();
+        String header = myAccount.getTextHeaderAddress();
         Assert.assertThat(header, CoreMatchers.containsString("MY ADDRESSES"));
     }
 
@@ -133,7 +132,7 @@ public class prestaShop extends BasicPrestaShopUI {
         loginPage.fillLogInForm("8767915@mail.com", "Qwerty0123456789");
         myAccount.openPersonInfo();
         //assert
-        String header = myAccount.getTextTitlePersonInfo();
+        String header = myAccount.getTextHeaderPersonInfo();
         Assert.assertThat(header, CoreMatchers.containsString("YOUR PERSONAL INFORMATION"));
     }
 
@@ -148,7 +147,7 @@ public class prestaShop extends BasicPrestaShopUI {
         loginPage.fillLogInForm("8767915@mail.com", "Qwerty0123456789");
         myAccount.openWishlist();
         //assert
-        String header = myAccount.getTextTitleWishlist();
+        String header = myAccount.getTextHeaderWishlist();
         Assert.assertThat(header, CoreMatchers.containsString("MY WISHLISTS"));
     }
 }

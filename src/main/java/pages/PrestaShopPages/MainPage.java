@@ -3,10 +3,8 @@ package pages.PrestaShopPages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
-import static pages.PrestaShopPages.BoolConditions.TITLECONTAINS;
+import static pages.PrestaShopPages.BoolConditions.IN_TITLE;
 import static pages.PrestaShopPages.Conditions.*;
 
 //see package implicit_wait
@@ -38,10 +36,11 @@ public class MainPage extends BasePage {
 
     public void clickOnLogOutBtn() {
         $(logout_btn, CLICKABLE).click();
+        waitFor("Login - My Store", IN_TITLE);
     }
 
     public String getTitleAfterLogOut() {
-        return $(out_header, TITLECONTAINS).getText();
+        return $(out_header, VISIBLE).getText();
     }
 
     public void clickOnContactUsBtn() {
@@ -49,10 +48,10 @@ public class MainPage extends BasePage {
     }
 
     public String getFirstTipText() {
-        return $(firstTip, TITLECONTAINS).getText();
+        return $(firstTip, VISIBLE).getText();
     }
 
-    public WebElement waitForHoverOnFirstTip(){
+    public WebElement waitForHoverOnFirstTip() {
         return conditionWaiter(CustomCondition.attributeContains(firstTip, "class", "ac_over"));
     }
 
@@ -63,13 +62,13 @@ public class MainPage extends BasePage {
     }
 
     //See test verifySecondTextInSearch (ImplicitWait)
-    public void verifyFirstTipIsAbsent(){
-        (new WebDriverWait(driver,10))
-                .until(ExpectedConditions.stalenessOf((WebElement)firstTip));
-    }
-
-    public String getTextOfSecondTip(){
-        return $(firstTip, VISIBLE).getText();
-    }
+//    public void verifyFirstTipIsAbsent(){
+//        (new WebDriverWait(driver,10))
+//                .until(ExpectedConditions.stalenessOf((WebElement)firstTip));
+//    }
+//
+//    public String getTextOfSecondTip(){
+//        return $(firstTip, VISIBLE).getText();
+//    }
     //Finish see
 }

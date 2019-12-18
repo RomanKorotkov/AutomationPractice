@@ -5,8 +5,7 @@ import org.openqa.selenium.WebDriver;
 
 import java.util.Random;
 
-import static pages.PrestaShopPages.BoolConditions.TITLECONTAINS;
-import static pages.PrestaShopPages.BoolConditions.TITLEIS;
+import static pages.PrestaShopPages.BoolConditions.IN_TITLE;
 import static pages.PrestaShopPages.Conditions.*;
 
 public class SignInForm extends BasePage {
@@ -54,6 +53,7 @@ public class SignInForm extends BasePage {
     private By account_header = By.xpath("//h1[contains(text(),'My account')]");
 
     public void fillRegisterForm() {
+        waitFor("Login - My Store", IN_TITLE);
         $(mail, VISIBLE).sendKeys(random.nextInt(10000000) + "@mail.com");
         $(submit_btn, CLICKABLE).click();
         $(gender, CLICKABLE).click();
@@ -76,12 +76,12 @@ public class SignInForm extends BasePage {
         $(submit_account, CLICKABLE).click();
     }
 
-    public String getErrorTextIfUserExist() {
-        return $(account_error, VISIBLE).getText();
+    public String getHeaderTextAfterRegistration() {
+        return $(account_header, VISIBLE).getText();
     }
 
-    public String getTitleTextAfterRegistration() {
-        return $(account_header, TITLECONTAINS).getText();
+    public String getErrorTextIfUserExist() {
+        return $(account_error, VISIBLE).getText();
     }
 
     public void signWithExistedEmail() {

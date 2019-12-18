@@ -20,31 +20,36 @@ public abstract class BasePage {
         PageFactory.initElements(driver, this);
     }
 
-    protected Boolean $(String title, Function<String, ExpectedCondition<Boolean>> title_condition){
+    protected Boolean $(String title, Function<String, ExpectedCondition<Boolean>> title_condition) {
         return conditionWaiter(title_condition.apply(title));
     }
-    protected Boolean $(String title, BoolConditions boolConditions){
-        return conditionWaiter(boolConditions.getTitle_condition().apply(title));
+
+    protected Boolean $(String title, BoolConditions boolConditions) {
+        return conditionWaiter(boolConditions.getCondition().apply(title));
     }
 
-    protected WebElement $(By locator, Function<By, ExpectedCondition<WebElement>> condition){
+    protected void waitFor(String expString, BoolConditions condition) {
+        conditionWaiter(condition.getCondition().apply(expString));
+    }
+
+    protected WebElement $(By locator, Function<By, ExpectedCondition<WebElement>> condition) {
         return conditionWaiter(condition.apply(locator));
     }
 
-    protected WebElement $(By locator, Conditions conditions){
+    protected WebElement $(By locator, Conditions conditions) {
         return conditionWaiter(conditions.getCondition().apply(locator));
     }
 
-    protected WebElement $(By locator, BoolConditions titleis){
+    protected WebElement $(By locator) {
         //return conditionWaiter(ExpectedConditions.presenceOfElementLocated(locator));
         return $(locator, PRESENCE);
     }
 
-    protected<T> T timeWaiter(ExpectedCondition<T> condition, long timeout){
-        return new WebDriverWait(driver,timeout).until(condition);
+    protected <T> T timeWaiter(ExpectedCondition<T> condition, long timeout) {
+        return new WebDriverWait(driver, timeout).until(condition);
     }
 
-    protected<T> T conditionWaiter(ExpectedCondition<T> condition){
+    protected <T> T conditionWaiter(ExpectedCondition<T> condition) {
         return timeWaiter(condition, 10l);
     }
 }

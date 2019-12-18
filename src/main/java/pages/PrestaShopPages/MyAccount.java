@@ -3,8 +3,9 @@ package pages.PrestaShopPages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-import static pages.PrestaShopPages.BoolConditions.TITLECONTAINS;
+import static pages.PrestaShopPages.BoolConditions.IN_TITLE;
 import static pages.PrestaShopPages.Conditions.CLICKABLE;
+import static pages.PrestaShopPages.Conditions.VISIBLE;
 
 public class MyAccount extends BasePage {
 
@@ -29,41 +30,46 @@ public class MyAccount extends BasePage {
 
     public void openOrder() {
         $(order_details, CLICKABLE).click();
+        waitFor("Order history - My Store", IN_TITLE);
     }
 
-    public String getTextTitleOrders() {
-        return $(order_header, TITLECONTAINS).getText();
+    public String getTextHeaderOrders() {
+        return $(order_header, VISIBLE).getText();
     }
 
     public void openCredit() {
         $(credit_slips, CLICKABLE).click();
+        waitFor("Order slip - My Store", IN_TITLE);
     }
 
-    public String getTextTitleCredit() {
-        return $(creedit_header, TITLECONTAINS).getText();
+    public String getTextHeaderCredit() {
+        return $(creedit_header, VISIBLE).getText();
     }
 
     public void openAddress() {
         $(addresses, CLICKABLE).click();
+        waitFor("Addresses - My Store", IN_TITLE);
     }
 
-    public String getTextTitleAddress() {
-        return $(addresses_header, TITLECONTAINS).getText();
+    public String getTextHeaderAddress() {
+        return $(addresses_header, VISIBLE).getText();
     }
 
     public void openPersonInfo() {
         $(person_info, CLICKABLE).click();
+        waitFor("Identity - My Store", IN_TITLE);
     }
 
-    public String getTextTitlePersonInfo() {
-        return $(person_header, TITLECONTAINS).getText();
+    public String getTextHeaderPersonInfo() {
+        return $(person_header, VISIBLE).getText();
     }
 
     public void openWishlist() {
         $(wishlist, CLICKABLE).click();
+        waitFor("My Store", IN_TITLE);
     }
 
-    public String getTextTitleWishlist() {
-        return $(wishlist_header, TITLECONTAINS).getText();
+    public String getTextHeaderWishlist() {
+        return $(wishlist_header, VISIBLE).getText();
     }
 }

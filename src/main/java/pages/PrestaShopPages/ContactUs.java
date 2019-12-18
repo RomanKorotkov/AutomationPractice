@@ -3,6 +3,7 @@ package pages.PrestaShopPages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
+import static pages.PrestaShopPages.BoolConditions.IN_URL;
 import static pages.PrestaShopPages.Conditions.*;
 
 public class ContactUs extends BasePage {
@@ -10,8 +11,6 @@ public class ContactUs extends BasePage {
     public ContactUs(WebDriver driver) {
         super(driver);
     }
-
-
 
     private By set_subject = By.xpath("//*[@value= '1']");
 
@@ -23,14 +22,11 @@ public class ContactUs extends BasePage {
     private By success_msg = By.xpath("//*[@class= 'alert alert-success']");
 
     public void fillContactForm() {
+        waitFor("http://automationpractice.com/index.php?controller=contact", IN_URL);
         $(set_subject, CLICKABLE).click();
         $(message, PRESENCE).sendKeys("test TEST Test TeSt tEsT teST TEst");
         $(upload, PRESENCE).sendKeys("C:\\Users\\roman.korotkov\\IdeaProjects\\automatedtests\\TestData.txt");
         $(send_btn, CLICKABLE).click();
-    }
-
-    public Boolean getUrlContactUsPage(){
-        return  $("http://automationpractice.com/index.php?controller=contact", BoolConditions.URLCONTAINS);
     }
 
     public String getTextMessageAfterEmailSending() {
