@@ -1,1 +1,1 @@
-# Automation project for [automationpractice.com](automationpractice.com) site with Selenium WebDriver + Java
+# Automation project for [automationpractice.com](http://automationpractice.com/index.php) site with Selenium WebDriver + Java
