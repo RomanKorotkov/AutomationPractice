@@ -1,0 +1,1 @@
+# Automation project for [automationpractice.com](automationpractice.com) site with Selenium WebDriver + Java
