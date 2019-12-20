@@ -1,7 +1,5 @@
-package pages.PrestaShopPages;
+package pages.presta_shop_pages;
 
-import com.sun.deploy.security.SelectableSecurityManager;
-import org.checkerframework.checker.nullness.compatqual.NullableDecl;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;

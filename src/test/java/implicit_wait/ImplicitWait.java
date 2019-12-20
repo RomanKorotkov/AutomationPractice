@@ -11,9 +11,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import pages.PrestaShopPages.MainPage;
+import pages.presta_shop_pages.MainPage;
 
 import java.util.concurrent.TimeUnit;
 
@@ -75,10 +73,11 @@ public class ImplicitWait {
         mainPage.searchFor(secondQueryText);
 //        (new WebDriverWait(driver,10))
 //                .until(ExpectedConditions.stalenessOf((WebElement) mainPage.firstTip));
+
         //mainPage.checkElementStallen();
         //mainPage.verifyFirstTipIsAbsent();
-        //String secondText = mainPage.getTextOfSecondTip();//mainPage.firstTip.getText();
-        //Assert.assertThat(secondText, CoreMatchers.containsString("T-shirt"));
+       String secondText = mainPage.getTextOfSecondTip();/*mainPage.firstTip.getText();*/
+       Assert.assertThat(secondText, CoreMatchers.containsString("T-shirt"));
     }
 
     @Test

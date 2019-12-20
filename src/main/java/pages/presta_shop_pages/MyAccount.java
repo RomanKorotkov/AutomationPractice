@@ -1,11 +1,11 @@
-package pages.PrestaShopPages;
+package pages.presta_shop_pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-import static pages.PrestaShopPages.BoolConditions.IN_TITLE;
-import static pages.PrestaShopPages.Conditions.CLICKABLE;
-import static pages.PrestaShopPages.Conditions.VISIBLE;
+import static pages.presta_shop_pages.BoolConditions.IN_TITLE;
+import static pages.presta_shop_pages.Conditions.CLICKABLE;
+import static pages.presta_shop_pages.Conditions.VISIBLE;
 
 public class MyAccount extends BasePage {
 

@@ -1,4 +1,4 @@
-package pages.PrestaShopPages;
+package pages.presta_shop_pages;
 
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;

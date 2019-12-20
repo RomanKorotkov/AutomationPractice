@@ -1,11 +1,11 @@
-package pages.PrestaShopPages;
+package pages.presta_shop_pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-import static pages.PrestaShopPages.BoolConditions.IN_TITLE;
-import static pages.PrestaShopPages.Conditions.*;
+import static pages.presta_shop_pages.BoolConditions.IN_TITLE;
+import static pages.presta_shop_pages.Conditions.*;
 
 //see package implicit_wait
 public class MainPage extends BasePage {
@@ -55,6 +55,10 @@ public class MainPage extends BasePage {
         return conditionWaiter(CustomCondition.attributeContains(firstTip, "class", "ac_over"));
     }
 
+    public Boolean getCurrentPageUrlAndTitle(){
+        return conditionWaiter(PageLoadedCondition.pageLoaded("http://automationpractice.com/index.php", "My Store"));
+    }
+
     public void searchFor(String query) {
         $(searchInput, CLICKABLE).click();
         $(searchInput, PRESENCE).clear();
@@ -67,8 +71,8 @@ public class MainPage extends BasePage {
 //                .until(ExpectedConditions.stalenessOf((WebElement)firstTip));
 //    }
 //
-//    public String getTextOfSecondTip(){
-//        return $(firstTip, VISIBLE).getText();
-//    }
+    public String getTextOfSecondTip(){
+        return $(firstTip, VISIBLE).getText();
+    }
     //Finish see
 }

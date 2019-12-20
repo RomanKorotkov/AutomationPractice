@@ -1,12 +1,12 @@
-package pages.PrestaShopPages;
+package pages.presta_shop_pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 import java.util.Random;
 
-import static pages.PrestaShopPages.BoolConditions.IN_TITLE;
-import static pages.PrestaShopPages.Conditions.*;
+import static pages.presta_shop_pages.BoolConditions.IN_TITLE;
+import static pages.presta_shop_pages.Conditions.*;
 
 public class SignInForm extends BasePage {
 

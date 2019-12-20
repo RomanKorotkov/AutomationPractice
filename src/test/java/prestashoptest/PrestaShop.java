@@ -1,11 +1,12 @@
-package prestaShopTest;
+package prestashoptest;
 
 import org.hamcrest.CoreMatchers;
 import org.junit.Assert;
 import org.junit.Test;
-import pages.PrestaShopPages.*;
+import org.junit.experimental.categories.Category;
+import pages.presta_shop_pages.*;
 
-public class prestaShop extends BasicPrestaShopUI {
+public class PrestaShop extends BasicPrestaShopUI {
 
     @Test
     public void signIn() {
@@ -149,5 +150,18 @@ public class prestaShop extends BasicPrestaShopUI {
         //assert
         String header = myAccount.getTextHeaderWishlist();
         Assert.assertThat(header, CoreMatchers.containsString("MY WISHLISTS"));
+    }
+
+    @Test
+    @Category(RunWithOwnConditionTest.class)
+        public void verifyTitleAndUrl(){
+        //arrange
+        MainPage mainPage = new MainPage(driver);
+        //assert
+        Assert.assertTrue(mainPage.getCurrentPageUrlAndTitle());
+        assertAll(
+                o-> Assert.assertEquals("http://automationpractice.com/index.php", getDriver().getCurrentUrl()),
+                o->Assert.assertEquals("My Store", getDriver().getTitle())
+        );
     }
 }

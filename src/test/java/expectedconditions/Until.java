@@ -1,4 +1,4 @@
-package expectedConditions;
+package expectedconditions;
 
 import org.hamcrest.CoreMatchers;
 import org.junit.*;

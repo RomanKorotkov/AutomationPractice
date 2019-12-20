@@ -1,10 +1,15 @@
-package prestaShopTest;
+package prestashoptest;
 
 import org.junit.*;
 import org.junit.rules.ErrorCollector;
 import org.junit.rules.TestWatcher;
 import org.junit.runner.Description;
 import org.openqa.selenium.WebDriver;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.function.Consumer;
+import java.util.stream.Collectors;
 
 public abstract class BasicPrestaShop {
     WebDriver driver;
@@ -45,5 +50,22 @@ public abstract class BasicPrestaShop {
     @AfterClass
     public static void afterEveryTest() {
         System.out.println("All the test are finished");
+    }
+
+    protected void assertAll(Consumer<Boolean>... assertions){
+        List<AssertionError> errors = new ArrayList<>();
+
+        for(Consumer<Boolean> assertion : assertions){
+            try{
+                assertion.accept(true);
+            }catch (AssertionError ae){
+                errors.add(ae);
+            }
+        }
+
+        assert errors.isEmpty():errors
+                .stream()
+                .map(assertionError -> assertionError.getMessage().replace("java.lang.AssertionError:", ""))
+                .collect(Collectors.toList()).toString();
     }
 }
