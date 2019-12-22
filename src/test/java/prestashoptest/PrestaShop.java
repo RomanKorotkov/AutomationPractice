@@ -164,4 +164,9 @@ public class PrestaShop extends BasicPrestaShopUI {
                 o -> Assert.assertEquals("My Store", getDriver().getTitle())
         );
     }
+
+    @Test
+    public void withLogg(){
+
+    }
 }
