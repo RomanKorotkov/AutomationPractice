@@ -5,6 +5,7 @@ import org.junit.rules.ErrorCollector;
 import org.junit.rules.TestWatcher;
 import org.junit.runner.Description;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.events.EventFiringWebDriver;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,6 +14,9 @@ import java.util.stream.Collectors;
 
 public abstract class BasicPrestaShop {
     WebDriver driver;
+    public EventFiringWebDriver w_driver;
+    public EventListener eventListener;
+    String url = "http://automationpractice.com/index.php";
 
     @BeforeClass
     public static void forEveryTest() {
@@ -25,7 +29,8 @@ public abstract class BasicPrestaShop {
     }
 
     @Rule
-    public ErrorCollector collector = new ErrorCollector() {};
+    public ErrorCollector collector = new ErrorCollector() {
+    };
 
     @Rule
     public TestWatcher watcher = new TestWatcher() {
@@ -52,18 +57,18 @@ public abstract class BasicPrestaShop {
         System.out.println("All the test are finished");
     }
 
-    protected void assertAll(Consumer<Boolean>... assertions){
+    protected void assertAll(Consumer<Boolean>... assertions) {
         List<AssertionError> errors = new ArrayList<>();
 
-        for(Consumer<Boolean> assertion : assertions){
-            try{
+        for (Consumer<Boolean> assertion : assertions) {
+            try {
                 assertion.accept(true);
-            }catch (AssertionError ae){
+            } catch (AssertionError ae) {
                 errors.add(ae);
             }
         }
 
-        assert errors.isEmpty():errors
+        assert errors.isEmpty() : errors
                 .stream()
                 .map(assertionError -> assertionError.getMessage().replace("java.lang.AssertionError:", ""))
                 .collect(Collectors.toList()).toString();

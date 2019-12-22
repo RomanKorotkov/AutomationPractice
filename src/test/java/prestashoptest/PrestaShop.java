@@ -11,8 +11,8 @@ public class PrestaShop extends BasicPrestaShopUI {
     @Test
     public void signIn() {
         //arrange
-        MainPage mainPage = new MainPage(driver);
-        SignInForm signInForm = new SignInForm(driver);
+        MainPage mainPage = new MainPage(w_driver);
+        SignInForm signInForm = new SignInForm(w_driver);
         //act
         mainPage.clickOnLoginBtn();
         signInForm.fillRegisterForm();
@@ -24,8 +24,8 @@ public class PrestaShop extends BasicPrestaShopUI {
     @Test
     public void signExist() {
         //arrange
-        MainPage mainPage = new MainPage(driver);
-        SignInForm signInForm = new SignInForm(driver);
+        MainPage mainPage = new MainPage(w_driver);
+        SignInForm signInForm = new SignInForm(w_driver);
         //act
         mainPage.clickOnLoginBtn();
         signInForm.signWithExistedEmail();
@@ -37,8 +37,8 @@ public class PrestaShop extends BasicPrestaShopUI {
     @Test
     public void logInError() {
         //arrange
-        MainPage mainPage = new MainPage(driver);
-        LoginPage loginPage = new LoginPage(driver);
+        MainPage mainPage = new MainPage(w_driver);
+        LoginPage loginPage = new LoginPage(w_driver);
         //act
         mainPage.clickOnLoginBtn();
         loginPage.fillLogInForm("hohohihi@mail.com", "qscvfergbngr");
@@ -50,8 +50,8 @@ public class PrestaShop extends BasicPrestaShopUI {
     @Test
     public void logOut() {
         //arrange
-        MainPage mainPage = new MainPage(driver);
-        LoginPage loginPage = new LoginPage(driver);
+        MainPage mainPage = new MainPage(w_driver);
+        LoginPage loginPage = new LoginPage(w_driver);
         //act
         mainPage.clickOnLoginBtn();
         loginPage.fillLogInForm("8767915@mail.com", "Qwerty0123456789");
@@ -64,9 +64,9 @@ public class PrestaShop extends BasicPrestaShopUI {
     @Test
     public void contactUs() {
         //arrange
-        MainPage mainPage = new MainPage(driver);
-        LoginPage loginPage = new LoginPage(driver);
-        ContactUs contactUs = new ContactUs(driver);
+        MainPage mainPage = new MainPage(w_driver);
+        LoginPage loginPage = new LoginPage(w_driver);
+        ContactUs contactUs = new ContactUs(w_driver);
         //act
         mainPage.clickOnLoginBtn();
         loginPage.fillLogInForm("8767915@mail.com", "Qwerty0123456789");
@@ -80,9 +80,9 @@ public class PrestaShop extends BasicPrestaShopUI {
     @Test
     public void verifyOrdersPage() {
         //arrange
-        MainPage mainPage = new MainPage(driver);
-        LoginPage loginPage = new LoginPage(driver);
-        MyAccount myAccount = new MyAccount(driver);
+        MainPage mainPage = new MainPage(w_driver);
+        LoginPage loginPage = new LoginPage(w_driver);
+        MyAccount myAccount = new MyAccount(w_driver);
         //act
         mainPage.clickOnLoginBtn();
         loginPage.fillLogInForm("8767915@mail.com", "Qwerty0123456789");
@@ -95,9 +95,9 @@ public class PrestaShop extends BasicPrestaShopUI {
     @Test
     public void verifyCreditPage() {
         //arrange
-        MainPage mainPage = new MainPage(driver);
-        LoginPage loginPage = new LoginPage(driver);
-        MyAccount myAccount = new MyAccount(driver);
+        MainPage mainPage = new MainPage(w_driver);
+        LoginPage loginPage = new LoginPage(w_driver);
+        MyAccount myAccount = new MyAccount(w_driver);
         //act
         mainPage.clickOnLoginBtn();
         loginPage.fillLogInForm("8767915@mail.com", "Qwerty0123456789");
@@ -110,9 +110,9 @@ public class PrestaShop extends BasicPrestaShopUI {
     @Test
     public void verifyAddressesPage() {
         //arrange
-        MainPage mainPage = new MainPage(driver);
-        LoginPage loginPage = new LoginPage(driver);
-        MyAccount myAccount = new MyAccount(driver);
+        MainPage mainPage = new MainPage(w_driver);
+        LoginPage loginPage = new LoginPage(w_driver);
+        MyAccount myAccount = new MyAccount(w_driver);
         //act
         mainPage.clickOnLoginBtn();
         loginPage.fillLogInForm("8767915@mail.com", "Qwerty0123456789");
@@ -125,9 +125,9 @@ public class PrestaShop extends BasicPrestaShopUI {
     @Test
     public void verifyPersonInfoPage() {
         //arrange
-        MainPage mainPage = new MainPage(driver);
-        LoginPage loginPage = new LoginPage(driver);
-        MyAccount myAccount = new MyAccount(driver);
+        MainPage mainPage = new MainPage(w_driver);
+        LoginPage loginPage = new LoginPage(w_driver);
+        MyAccount myAccount = new MyAccount(w_driver);
         //act
         mainPage.clickOnLoginBtn();
         loginPage.fillLogInForm("8767915@mail.com", "Qwerty0123456789");
@@ -140,9 +140,9 @@ public class PrestaShop extends BasicPrestaShopUI {
     @Test
     public void verifyWishlistPage() {
         //arrange
-        MainPage mainPage = new MainPage(driver);
-        LoginPage loginPage = new LoginPage(driver);
-        MyAccount myAccount = new MyAccount(driver);
+        MainPage mainPage = new MainPage(w_driver);
+        LoginPage loginPage = new LoginPage(w_driver);
+        MyAccount myAccount = new MyAccount(w_driver);
         //act
         mainPage.clickOnLoginBtn();
         loginPage.fillLogInForm("8767915@mail.com", "Qwerty0123456789");
@@ -154,14 +154,14 @@ public class PrestaShop extends BasicPrestaShopUI {
 
     @Test
     @Category(RunWithOwnConditionTest.class)
-        public void verifyTitleAndUrl(){
+    public void verifyTitleAndUrl() {
         //arrange
-        MainPage mainPage = new MainPage(driver);
+        MainPage mainPage = new MainPage(w_driver);
         //assert
         Assert.assertTrue(mainPage.getCurrentPageUrlAndTitle());
         assertAll(
-                o-> Assert.assertEquals("http://automationpractice.com/index.php", getDriver().getCurrentUrl()),
-                o->Assert.assertEquals("My Store", getDriver().getTitle())
+                o -> Assert.assertEquals("http://automationpractice.com/index.php", getDriver().getCurrentUrl()),
+                o -> Assert.assertEquals("My Store", getDriver().getTitle())
         );
     }
 }
