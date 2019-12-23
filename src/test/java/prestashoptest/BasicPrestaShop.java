@@ -1,5 +1,6 @@
 package prestashoptest;
 
+import event.listener.EventListener;
 import org.junit.*;
 import org.junit.rules.ErrorCollector;
 import org.junit.rules.TestWatcher;
@@ -14,8 +15,7 @@ import java.util.stream.Collectors;
 
 public abstract class BasicPrestaShop {
     WebDriver driver;
-    public EventFiringWebDriver w_driver;
-    public EventListener eventListener;
+
     String url = "http://automationpractice.com/index.php";
 
     @BeforeClass

@@ -1,6 +1,7 @@
 package prestashoptest;
 
 import api.BaseAPI;
+import event.listener.EventListener;
 import org.junit.After;
 import org.junit.Before;
 import org.openqa.selenium.Dimension;
@@ -14,13 +15,13 @@ public class BasicPrestaShopUI extends BasicPrestaShop implements BaseAPI {
     @Before
     public void forEachTest() {
         System.setProperty("webdriver.chrome.driver", "C:\\Users\\roman.korotkov\\IdeaProjects\\chromedriver.exe");
-        driver = new ChromeDriver();
-        w_driver = new EventFiringWebDriver(driver);
-        eventListener = new EventListener();
+        EventFiringWebDriver w_driver = new EventFiringWebDriver(new ChromeDriver());
+        EventListener eventListener = new EventListener();
         w_driver.register(eventListener);
-        w_driver.manage().window().setSize(new Dimension(1920, 1080));
+        driver = w_driver;
+        driver.manage().window().setSize(new Dimension(1920, 1080));
         System.out.println("WebDriver is ready for run test");
-        w_driver.get(url);
+        driver.get(url);
     }
 
     @Override
