@@ -1,6 +1,8 @@
 package prestashoptest;
 
 import event.listener.EventListener;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.junit.*;
 import org.junit.rules.ErrorCollector;
 import org.junit.rules.TestWatcher;
@@ -14,18 +16,21 @@ import java.util.function.Consumer;
 import java.util.stream.Collectors;
 
 public abstract class BasicPrestaShop {
+
+    public static final Logger LOGGER = LogManager.getLogger(BasicPrestaShop.class);
+
     WebDriver driver;
 
     String url = "http://automationpractice.com/index.php";
 
     @BeforeClass
     public static void forEveryTest() {
-        System.out.println("Preparation for all test");
+        LOGGER.debug("Preparation for all test is ready");
     }
 
     @Before
     public void forEachTest() {
-        System.out.println("Test is ready");
+        LOGGER.debug("Test is ready");
     }
 
     @Rule
@@ -36,25 +41,27 @@ public abstract class BasicPrestaShop {
     public TestWatcher watcher = new TestWatcher() {
         @Override
         protected void succeeded(Description description) {
+            LOGGER.info("Test '{}' - PASSED", description.getMethodName());
             super.succeeded(description);
-            System.out.println(description.getDisplayName() + "Succeeded");
+            //System.out.println(description.getDisplayName() + "Succeeded");
         }
 
         @Override
         protected void failed(Throwable e, Description description) {
+            LOGGER.error("Test '{}' - FAILED due to: " + description.getMethodName(), e.getMessage());
             super.failed(e, description);
-            System.out.println(description.getDisplayName() + "Failed");
+            //System.out.println(description.getDisplayName() + "Failed");
         }
     };
 
     @After
     public void afterEachTest() {
-        System.out.println("Test finished");
+        LOGGER.debug("Test finished");
     }
 
     @AfterClass
     public static void afterEveryTest() {
-        System.out.println("All the test are finished");
+        LOGGER.debug("All the test are finished");
     }
 
     protected void assertAll(Consumer<Boolean>... assertions) {

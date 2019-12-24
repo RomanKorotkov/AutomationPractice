@@ -1,0 +1,199 @@
+[DEBUG] | 2019-12-24 13:45:31 | (BasicPrestaShop.java:28) - Preparation for all test is ready
+[DEBUG] | 2019-12-24 13:45:37 | (BasicPrestaShopUI.java:26) - WebDriver is ready for run test
+[INFO ] | 2019-12-24 13:45:37 | (EventListener.java:20) - Navigated to:'http://automationpractice.com/index.php'
+[DEBUG] | 2019-12-24 13:45:41 | (EventListener.java:26) - Trying to find by: By.xpath: //*[@class= 'login']
+[DEBUG] | 2019-12-24 13:45:41 | (EventListener.java:34) - Trying to click on: by xpath: //*[@class= 'login']
+[DEBUG] | 2019-12-24 13:45:43 | (EventListener.java:26) - Trying to find by: By.id: email
+[DEBUG] | 2019-12-24 13:45:43 | (EventListener.java:26) - Trying to find by: By.id: email
+[DEBUG] | 2019-12-24 13:45:43 | (EventListener.java:39) - Trying to send keys [8767915@mail.com] for : by id: email
+[DEBUG] | 2019-12-24 13:45:43 | (EventListener.java:26) - Trying to find by: By.id: passwd
+[DEBUG] | 2019-12-24 13:45:44 | (EventListener.java:39) - Trying to send keys [Qwerty0123456789] for : by id: passwd
+[DEBUG] | 2019-12-24 13:45:44 | (EventListener.java:26) - Trying to find by: By.id: SubmitLogin
+[DEBUG] | 2019-12-24 13:45:44 | (EventListener.java:34) - Trying to click on: by id: SubmitLogin
+[DEBUG] | 2019-12-24 13:45:45 | (EventListener.java:26) - Trying to find by: By.xpath: //*[@title= 'Information']
+[DEBUG] | 2019-12-24 13:45:45 | (EventListener.java:34) - Trying to click on: by xpath: //*[@title= 'Information']
+[DEBUG] | 2019-12-24 13:45:47 | (EventListener.java:26) - Trying to find by: By.xpath: //h1[contains (text(), 'Your personal information')]
+[DEBUG] | 2019-12-24 13:45:48 | (BasicPrestaShopUI.java:38) - ChromeDriver has been shut down
+[INFO ] | 2019-12-24 13:45:48 | (BasicPrestaShop.java:44) - Test 'verifyPersonInfoPage' - PASSED
+[DEBUG] | 2019-12-24 13:45:51 | (BasicPrestaShopUI.java:26) - WebDriver is ready for run test
+[INFO ] | 2019-12-24 13:45:51 | (EventListener.java:20) - Navigated to:'http://automationpractice.com/index.php'
+[DEBUG] | 2019-12-24 13:45:55 | (EventListener.java:26) - Trying to find by: By.xpath: //*[@class= 'login']
+[DEBUG] | 2019-12-24 13:45:55 | (EventListener.java:34) - Trying to click on: by xpath: //*[@class= 'login']
+[DEBUG] | 2019-12-24 13:45:57 | (EventListener.java:26) - Trying to find by: By.id: email
+[DEBUG] | 2019-12-24 13:45:57 | (EventListener.java:39) - Trying to send keys [8767915@mail.com] for : by id: email
+[DEBUG] | 2019-12-24 13:45:57 | (EventListener.java:26) - Trying to find by: By.id: passwd
+[DEBUG] | 2019-12-24 13:45:57 | (EventListener.java:39) - Trying to send keys [Qwerty0123456789] for : by id: passwd
+[DEBUG] | 2019-12-24 13:45:57 | (EventListener.java:26) - Trying to find by: By.id: SubmitLogin
+[DEBUG] | 2019-12-24 13:45:57 | (EventListener.java:34) - Trying to click on: by id: SubmitLogin
+[DEBUG] | 2019-12-24 13:45:59 | (EventListener.java:26) - Trying to find by: By.xpath: //*[@title= 'Credit slips']
+[DEBUG] | 2019-12-24 13:45:59 | (EventListener.java:34) - Trying to click on: by xpath: //*[@title= 'Credit slips']
+[DEBUG] | 2019-12-24 13:46:00 | (EventListener.java:26) - Trying to find by: By.xpath: //h1[contains (text(), 'Credit slips')]
+[DEBUG] | 2019-12-24 13:46:01 | (BasicPrestaShopUI.java:38) - ChromeDriver has been shut down
+[INFO ] | 2019-12-24 13:46:01 | (BasicPrestaShop.java:44) - Test 'verifyCreditPage' - PASSED
+[DEBUG] | 2019-12-24 13:46:05 | (BasicPrestaShopUI.java:26) - WebDriver is ready for run test
+[INFO ] | 2019-12-24 13:46:05 | (EventListener.java:20) - Navigated to:'http://automationpractice.com/index.php'
+[DEBUG] | 2019-12-24 13:46:09 | (EventListener.java:26) - Trying to find by: By.xpath: //*[@class= 'login']
+[DEBUG] | 2019-12-24 13:46:09 | (EventListener.java:34) - Trying to click on: by xpath: //*[@class= 'login']
+[DEBUG] | 2019-12-24 13:46:10 | (EventListener.java:26) - Trying to find by: By.id: email
+[DEBUG] | 2019-12-24 13:46:11 | (EventListener.java:26) - Trying to find by: By.id: email
+[DEBUG] | 2019-12-24 13:46:11 | (EventListener.java:39) - Trying to send keys [8767915@mail.com] for : by id: email
+[DEBUG] | 2019-12-24 13:46:11 | (EventListener.java:26) - Trying to find by: By.id: passwd
+[DEBUG] | 2019-12-24 13:46:11 | (EventListener.java:39) - Trying to send keys [Qwerty0123456789] for : by id: passwd
+[DEBUG] | 2019-12-24 13:46:11 | (EventListener.java:26) - Trying to find by: By.id: SubmitLogin
+[DEBUG] | 2019-12-24 13:46:11 | (EventListener.java:34) - Trying to click on: by id: SubmitLogin
+[DEBUG] | 2019-12-24 13:46:13 | (EventListener.java:26) - Trying to find by: By.xpath: //*[@title= 'Log me out']
+[DEBUG] | 2019-12-24 13:46:13 | (EventListener.java:34) - Trying to click on: by xpath: //*[@title= 'Log me out']
+[DEBUG] | 2019-12-24 13:46:15 | (EventListener.java:26) - Trying to find by: By.xpath: //h1
+[DEBUG] | 2019-12-24 13:46:16 | (BasicPrestaShopUI.java:38) - ChromeDriver has been shut down
+[INFO ] | 2019-12-24 13:46:16 | (BasicPrestaShop.java:44) - Test 'logOut' - PASSED
+[DEBUG] | 2019-12-24 13:46:19 | (BasicPrestaShopUI.java:26) - WebDriver is ready for run test
+[INFO ] | 2019-12-24 13:46:19 | (EventListener.java:20) - Navigated to:'http://automationpractice.com/index.php'
+[DEBUG] | 2019-12-24 13:46:23 | (EventListener.java:26) - Trying to find by: By.xpath: //*[@class= 'login']
+[DEBUG] | 2019-12-24 13:46:23 | (EventListener.java:34) - Trying to click on: by xpath: //*[@class= 'login']
+[DEBUG] | 2019-12-24 13:46:25 | (EventListener.java:26) - Trying to find by: By.id: email_create
+[DEBUG] | 2019-12-24 13:46:25 | (EventListener.java:26) - Trying to find by: By.id: email_create
+[DEBUG] | 2019-12-24 13:46:25 | (EventListener.java:39) - Trying to send keys [2507514@mail.com] for : by id: email_create
+[DEBUG] | 2019-12-24 13:46:25 | (EventListener.java:26) - Trying to find by: By.id: SubmitCreate
+[DEBUG] | 2019-12-24 13:46:25 | (EventListener.java:34) - Trying to click on: by id: SubmitCreate
+[DEBUG] | 2019-12-24 13:46:26 | (EventListener.java:26) - Trying to find by: By.id: id_gender1
+[DEBUG] | 2019-12-24 13:46:26 | (EventListener.java:26) - Trying to find by: By.id: id_gender1
+[DEBUG] | 2019-12-24 13:46:27 | (EventListener.java:26) - Trying to find by: By.id: id_gender1
+[DEBUG] | 2019-12-24 13:46:27 | (EventListener.java:26) - Trying to find by: By.id: id_gender1
+[DEBUG] | 2019-12-24 13:46:27 | (EventListener.java:34) - Trying to click on: by id: id_gender1
+[DEBUG] | 2019-12-24 13:46:27 | (EventListener.java:26) - Trying to find by: By.id: customer_firstname
+[DEBUG] | 2019-12-24 13:46:27 | (EventListener.java:39) - Trying to send keys [QA] for : by id: customer_firstname
+[DEBUG] | 2019-12-24 13:46:27 | (EventListener.java:26) - Trying to find by: By.id: customer_lastname
+[DEBUG] | 2019-12-24 13:46:27 | (EventListener.java:39) - Trying to send keys [QA] for : by id: customer_lastname
+[DEBUG] | 2019-12-24 13:46:28 | (EventListener.java:26) - Trying to find by: By.id: passwd
+[DEBUG] | 2019-12-24 13:46:28 | (EventListener.java:39) - Trying to send keys [2020080204qa] for : by id: passwd
+[DEBUG] | 2019-12-24 13:46:28 | (EventListener.java:26) - Trying to find by: By.id: firstname
+[DEBUG] | 2019-12-24 13:46:28 | (EventListener.java:39) - Trying to send keys null for : by id: firstname
+[DEBUG] | 2019-12-24 13:46:28 | (EventListener.java:26) - Trying to find by: By.id: firstname
+[DEBUG] | 2019-12-24 13:46:28 | (EventListener.java:39) - Trying to send keys [Tester] for : by id: firstname
+[DEBUG] | 2019-12-24 13:46:28 | (EventListener.java:26) - Trying to find by: By.id: lastname
+[DEBUG] | 2019-12-24 13:46:28 | (EventListener.java:39) - Trying to send keys null for : by id: lastname
+[DEBUG] | 2019-12-24 13:46:28 | (EventListener.java:26) - Trying to find by: By.id: lastname
+[DEBUG] | 2019-12-24 13:46:28 | (EventListener.java:39) - Trying to send keys [Tester] for : by id: lastname
+[DEBUG] | 2019-12-24 13:46:28 | (EventListener.java:26) - Trying to find by: By.id: address1
+[DEBUG] | 2019-12-24 13:46:28 | (EventListener.java:39) - Trying to send keys [376843056IDEA] for : by id: address1
+[DEBUG] | 2019-12-24 13:46:28 | (EventListener.java:26) - Trying to find by: By.id: city
+[DEBUG] | 2019-12-24 13:46:28 | (EventListener.java:39) - Trying to send keys [-920376728Java] for : by id: city
+[DEBUG] | 2019-12-24 13:46:28 | (EventListener.java:26) - Trying to find by: By.xpath: //*[@id="id_state"]/option[3]
+[DEBUG] | 2019-12-24 13:46:28 | (EventListener.java:34) - Trying to click on: by xpath: //*[@id="id_state"]/option[3]
+[DEBUG] | 2019-12-24 13:46:28 | (EventListener.java:26) - Trying to find by: By.id: postcode
+[DEBUG] | 2019-12-24 13:46:29 | (EventListener.java:39) - Trying to send keys [23895] for : by id: postcode
+[DEBUG] | 2019-12-24 13:46:29 | (EventListener.java:26) - Trying to find by: By.id: other
+[DEBUG] | 2019-12-24 13:46:29 | (EventListener.java:39) - Trying to send keys [Testing] for : by id: other
+[DEBUG] | 2019-12-24 13:46:29 | (EventListener.java:26) - Trying to find by: By.id: phone
+[DEBUG] | 2019-12-24 13:46:29 | (EventListener.java:39) - Trying to send keys [056245879] for : by id: phone
+[DEBUG] | 2019-12-24 13:46:29 | (EventListener.java:26) - Trying to find by: By.id: phone_mobile
+[DEBUG] | 2019-12-24 13:46:29 | (EventListener.java:39) - Trying to send keys [0236589741] for : by id: phone_mobile
+[DEBUG] | 2019-12-24 13:46:29 | (EventListener.java:26) - Trying to find by: By.id: alias
+[DEBUG] | 2019-12-24 13:46:29 | (EventListener.java:39) - Trying to send keys null for : by id: alias
+[DEBUG] | 2019-12-24 13:46:29 | (EventListener.java:26) - Trying to find by: By.id: alias
+[DEBUG] | 2019-12-24 13:46:29 | (EventListener.java:39) - Trying to send keys [Testing] for : by id: alias
+[DEBUG] | 2019-12-24 13:46:29 | (EventListener.java:26) - Trying to find by: By.id: submitAccount
+[DEBUG] | 2019-12-24 13:46:29 | (EventListener.java:34) - Trying to click on: by id: submitAccount
+[DEBUG] | 2019-12-24 13:46:31 | (EventListener.java:26) - Trying to find by: By.xpath: //h1[contains(text(),'My account')]
+[DEBUG] | 2019-12-24 13:46:32 | (BasicPrestaShopUI.java:38) - ChromeDriver has been shut down
+[INFO ] | 2019-12-24 13:46:32 | (BasicPrestaShop.java:44) - Test 'signIn' - PASSED
+[DEBUG] | 2019-12-24 13:46:35 | (BasicPrestaShopUI.java:26) - WebDriver is ready for run test
+[INFO ] | 2019-12-24 13:46:35 | (EventListener.java:20) - Navigated to:'http://automationpractice.com/index.php'
+[DEBUG] | 2019-12-24 13:46:40 | (BasicPrestaShopUI.java:38) - ChromeDriver has been shut down
+[INFO ] | 2019-12-24 13:46:40 | (BasicPrestaShop.java:44) - Test 'verifyTitleAndUrl' - PASSED
+[DEBUG] | 2019-12-24 13:46:44 | (BasicPrestaShopUI.java:26) - WebDriver is ready for run test
+[INFO ] | 2019-12-24 13:46:44 | (EventListener.java:20) - Navigated to:'http://automationpractice.com/index.php'
+[DEBUG] | 2019-12-24 13:46:48 | (EventListener.java:26) - Trying to find by: By.xpath: //*[@class= 'login']
+[DEBUG] | 2019-12-24 13:46:48 | (EventListener.java:34) - Trying to click on: by xpath: //*[@class= 'login']
+[DEBUG] | 2019-12-24 13:46:49 | (EventListener.java:26) - Trying to find by: By.id: email
+[DEBUG] | 2019-12-24 13:46:49 | (EventListener.java:39) - Trying to send keys [8767915@mail.com] for : by id: email
+[DEBUG] | 2019-12-24 13:46:49 | (EventListener.java:26) - Trying to find by: By.id: passwd
+[DEBUG] | 2019-12-24 13:46:50 | (EventListener.java:39) - Trying to send keys [Qwerty0123456789] for : by id: passwd
+[DEBUG] | 2019-12-24 13:46:50 | (EventListener.java:26) - Trying to find by: By.id: SubmitLogin
+[DEBUG] | 2019-12-24 13:46:50 | (EventListener.java:34) - Trying to click on: by id: SubmitLogin
+[DEBUG] | 2019-12-24 13:46:51 | (EventListener.java:26) - Trying to find by: By.id: contact-link
+[DEBUG] | 2019-12-24 13:46:51 | (EventListener.java:34) - Trying to click on: by id: contact-link
+[DEBUG] | 2019-12-24 13:46:53 | (EventListener.java:26) - Trying to find by: By.xpath: //*[@value= '1']
+[DEBUG] | 2019-12-24 13:46:53 | (EventListener.java:34) - Trying to click on: by xpath: //*[@value= '1']
+[DEBUG] | 2019-12-24 13:46:53 | (EventListener.java:26) - Trying to find by: By.id: message
+[DEBUG] | 2019-12-24 13:46:53 | (EventListener.java:39) - Trying to send keys [test TEST Test TeSt tEsT teST TEst] for : by id: message
+[DEBUG] | 2019-12-24 13:46:53 | (EventListener.java:26) - Trying to find by: By.id: fileUpload
+[DEBUG] | 2019-12-24 13:46:53 | (EventListener.java:39) - Trying to send keys [C:\Users\roman.korotkov\IdeaProjects\automatedtests\TestData.txt] for : by id: fileUpload
+[DEBUG] | 2019-12-24 13:46:53 | (EventListener.java:26) - Trying to find by: By.id: submitMessage
+[DEBUG] | 2019-12-24 13:46:53 | (EventListener.java:34) - Trying to click on: by id: submitMessage
+[DEBUG] | 2019-12-24 13:46:54 | (EventListener.java:26) - Trying to find by: By.xpath: //*[@class= 'alert alert-success']
+[DEBUG] | 2019-12-24 13:46:56 | (BasicPrestaShopUI.java:38) - ChromeDriver has been shut down
+[INFO ] | 2019-12-24 13:46:56 | (BasicPrestaShop.java:44) - Test 'contactUs' - PASSED
+[DEBUG] | 2019-12-24 13:46:59 | (BasicPrestaShopUI.java:26) - WebDriver is ready for run test
+[INFO ] | 2019-12-24 13:46:59 | (EventListener.java:20) - Navigated to:'http://automationpractice.com/index.php'
+[DEBUG] | 2019-12-24 13:47:03 | (EventListener.java:26) - Trying to find by: By.xpath: //*[@class= 'login']
+[DEBUG] | 2019-12-24 13:47:03 | (EventListener.java:34) - Trying to click on: by xpath: //*[@class= 'login']
+[DEBUG] | 2019-12-24 13:47:04 | (EventListener.java:26) - Trying to find by: By.id: email
+[DEBUG] | 2019-12-24 13:47:05 | (EventListener.java:26) - Trying to find by: By.id: email
+[DEBUG] | 2019-12-24 13:47:05 | (EventListener.java:39) - Trying to send keys [8767915@mail.com] for : by id: email
+[DEBUG] | 2019-12-24 13:47:05 | (EventListener.java:26) - Trying to find by: By.id: passwd
+[DEBUG] | 2019-12-24 13:47:05 | (EventListener.java:39) - Trying to send keys [Qwerty0123456789] for : by id: passwd
+[DEBUG] | 2019-12-24 13:47:06 | (EventListener.java:26) - Trying to find by: By.id: SubmitLogin
+[DEBUG] | 2019-12-24 13:47:06 | (EventListener.java:34) - Trying to click on: by id: SubmitLogin
+[DEBUG] | 2019-12-24 13:47:08 | (EventListener.java:26) - Trying to find by: By.xpath: //*[@title= 'Orders']
+[DEBUG] | 2019-12-24 13:47:08 | (EventListener.java:34) - Trying to click on: by xpath: //*[@title= 'Orders']
+[DEBUG] | 2019-12-24 13:47:09 | (EventListener.java:26) - Trying to find by: By.xpath: //h1[contains (text(), 'Order history')]
+[DEBUG] | 2019-12-24 13:47:10 | (BasicPrestaShopUI.java:38) - ChromeDriver has been shut down
+[INFO ] | 2019-12-24 13:47:10 | (BasicPrestaShop.java:44) - Test 'verifyOrdersPage' - PASSED
+[DEBUG] | 2019-12-24 13:47:14 | (BasicPrestaShopUI.java:26) - WebDriver is ready for run test
+[INFO ] | 2019-12-24 13:47:14 | (EventListener.java:20) - Navigated to:'http://automationpractice.com/index.php'
+[DEBUG] | 2019-12-24 13:47:17 | (EventListener.java:26) - Trying to find by: By.xpath: //*[@class= 'login']
+[DEBUG] | 2019-12-24 13:47:17 | (EventListener.java:34) - Trying to click on: by xpath: //*[@class= 'login']
+[DEBUG] | 2019-12-24 13:47:19 | (EventListener.java:26) - Trying to find by: By.id: email
+[DEBUG] | 2019-12-24 13:47:19 | (EventListener.java:39) - Trying to send keys [hohohihi@mail.com] for : by id: email
+[DEBUG] | 2019-12-24 13:47:19 | (EventListener.java:26) - Trying to find by: By.id: passwd
+[DEBUG] | 2019-12-24 13:47:20 | (EventListener.java:39) - Trying to send keys [qscvfergbngr] for : by id: passwd
+[DEBUG] | 2019-12-24 13:47:20 | (EventListener.java:26) - Trying to find by: By.id: SubmitLogin
+[DEBUG] | 2019-12-24 13:47:20 | (EventListener.java:34) - Trying to click on: by id: SubmitLogin
+[DEBUG] | 2019-12-24 13:47:21 | (EventListener.java:26) - Trying to find by: By.xpath: //ol/li[contains(text(),'Authentication failed.')]
+[DEBUG] | 2019-12-24 13:47:22 | (BasicPrestaShopUI.java:38) - ChromeDriver has been shut down
+[INFO ] | 2019-12-24 13:47:22 | (BasicPrestaShop.java:44) - Test 'logInError' - PASSED
+[DEBUG] | 2019-12-24 13:47:25 | (BasicPrestaShopUI.java:26) - WebDriver is ready for run test
+[INFO ] | 2019-12-24 13:47:25 | (EventListener.java:20) - Navigated to:'http://automationpractice.com/index.php'
+[DEBUG] | 2019-12-24 13:47:29 | (EventListener.java:26) - Trying to find by: By.xpath: //*[@class= 'login']
+[DEBUG] | 2019-12-24 13:47:29 | (EventListener.java:34) - Trying to click on: by xpath: //*[@class= 'login']
+[DEBUG] | 2019-12-24 13:47:31 | (EventListener.java:26) - Trying to find by: By.id: email_create
+[DEBUG] | 2019-12-24 13:47:31 | (EventListener.java:39) - Trying to send keys [8767915@mail.com] for : by id: email_create
+[DEBUG] | 2019-12-24 13:47:31 | (EventListener.java:26) - Trying to find by: By.id: SubmitCreate
+[DEBUG] | 2019-12-24 13:47:31 | (EventListener.java:34) - Trying to click on: by id: SubmitCreate
+[DEBUG] | 2019-12-24 13:47:31 | (EventListener.java:26) - Trying to find by: By.id: create_account_error
+[DEBUG] | 2019-12-24 13:47:32 | (EventListener.java:26) - Trying to find by: By.id: create_account_error
+[DEBUG] | 2019-12-24 13:47:32 | (BasicPrestaShopUI.java:38) - ChromeDriver has been shut down
+[INFO ] | 2019-12-24 13:47:32 | (BasicPrestaShop.java:44) - Test 'signExist' - PASSED
+[DEBUG] | 2019-12-24 13:47:36 | (BasicPrestaShopUI.java:26) - WebDriver is ready for run test
+[INFO ] | 2019-12-24 13:47:36 | (EventListener.java:20) - Navigated to:'http://automationpractice.com/index.php'
+[DEBUG] | 2019-12-24 13:47:40 | (EventListener.java:26) - Trying to find by: By.xpath: //*[@class= 'login']
+[DEBUG] | 2019-12-24 13:47:40 | (EventListener.java:34) - Trying to click on: by xpath: //*[@class= 'login']
+[DEBUG] | 2019-12-24 13:47:41 | (EventListener.java:26) - Trying to find by: By.id: email
+[DEBUG] | 2019-12-24 13:47:41 | (EventListener.java:39) - Trying to send keys [8767915@mail.com] for : by id: email
+[DEBUG] | 2019-12-24 13:47:42 | (EventListener.java:26) - Trying to find by: By.id: passwd
+[DEBUG] | 2019-12-24 13:47:42 | (EventListener.java:39) - Trying to send keys [Qwerty0123456789] for : by id: passwd
+[DEBUG] | 2019-12-24 13:47:42 | (EventListener.java:26) - Trying to find by: By.id: SubmitLogin
+[DEBUG] | 2019-12-24 13:47:42 | (EventListener.java:34) - Trying to click on: by id: SubmitLogin
+[DEBUG] | 2019-12-24 13:47:43 | (EventListener.java:26) - Trying to find by: By.xpath: //*[@title= 'My wishlists']
+[DEBUG] | 2019-12-24 13:47:44 | (EventListener.java:34) - Trying to click on: by xpath: //*[@title= 'My wishlists']
+[DEBUG] | 2019-12-24 13:47:45 | (EventListener.java:26) - Trying to find by: By.xpath: //h1[contains (text(), 'My wishlists')]
+[DEBUG] | 2019-12-24 13:47:46 | (BasicPrestaShopUI.java:38) - ChromeDriver has been shut down
+[INFO ] | 2019-12-24 13:47:46 | (BasicPrestaShop.java:44) - Test 'verifyWishlistPage' - PASSED
+[DEBUG] | 2019-12-24 13:47:49 | (BasicPrestaShopUI.java:26) - WebDriver is ready for run test
+[INFO ] | 2019-12-24 13:47:49 | (EventListener.java:20) - Navigated to:'http://automationpractice.com/index.php'
+[DEBUG] | 2019-12-24 13:47:53 | (EventListener.java:26) - Trying to find by: By.xpath: //*[@class= 'login']
+[DEBUG] | 2019-12-24 13:47:53 | (EventListener.java:34) - Trying to click on: by xpath: //*[@class= 'login']
+[DEBUG] | 2019-12-24 13:47:54 | (EventListener.java:26) - Trying to find by: By.id: email
+[DEBUG] | 2019-12-24 13:47:55 | (EventListener.java:26) - Trying to find by: By.id: email
+[DEBUG] | 2019-12-24 13:47:55 | (EventListener.java:39) - Trying to send keys [8767915@mail.com] for : by id: email
+[DEBUG] | 2019-12-24 13:47:55 | (EventListener.java:26) - Trying to find by: By.id: passwd
+[DEBUG] | 2019-12-24 13:47:55 | (EventListener.java:39) - Trying to send keys [Qwerty0123456789] for : by id: passwd
+[DEBUG] | 2019-12-24 13:47:55 | (EventListener.java:26) - Trying to find by: By.id: SubmitLogin
+[DEBUG] | 2019-12-24 13:47:55 | (EventListener.java:34) - Trying to click on: by id: SubmitLogin
+[DEBUG] | 2019-12-24 13:47:57 | (EventListener.java:26) - Trying to find by: By.xpath: //*[@title= 'Addresses']
+[DEBUG] | 2019-12-24 13:47:57 | (EventListener.java:34) - Trying to click on: by xpath: //*[@title= 'Addresses']
+[DEBUG] | 2019-12-24 13:47:59 | (EventListener.java:26) - Trying to find by: By.xpath: //h1[contains (text(), 'My addresses')]
+[DEBUG] | 2019-12-24 13:48:00 | (BasicPrestaShopUI.java:38) - ChromeDriver has been shut down
+[INFO ] | 2019-12-24 13:48:00 | (BasicPrestaShop.java:44) - Test 'verifyAddressesPage' - PASSED
+[DEBUG] | 2019-12-24 13:48:00 | (BasicPrestaShop.java:64) - All the test are finished

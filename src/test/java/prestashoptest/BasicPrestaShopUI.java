@@ -2,12 +2,15 @@ package prestashoptest;
 
 import api.BaseAPI;
 import event.listener.EventListener;
+import org.apache.logging.log4j.LogManager;
 import org.junit.After;
 import org.junit.Before;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
+
+import java.util.logging.Logger;
 
 
 public class BasicPrestaShopUI extends BasicPrestaShop implements BaseAPI {
@@ -20,7 +23,7 @@ public class BasicPrestaShopUI extends BasicPrestaShop implements BaseAPI {
         w_driver.register(eventListener);
         driver = w_driver;
         driver.manage().window().setSize(new Dimension(1920, 1080));
-        System.out.println("WebDriver is ready for run test");
+        LOGGER.debug("WebDriver is ready for run test");
         driver.get(url);
     }
 
@@ -32,5 +35,6 @@ public class BasicPrestaShopUI extends BasicPrestaShop implements BaseAPI {
     @After
     public void afterEachTest() {
         driver.quit();
+        LOGGER.debug("ChromeDriver has been shut down");
     }
 }
