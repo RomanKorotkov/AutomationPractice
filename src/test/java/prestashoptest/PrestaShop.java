@@ -1,10 +1,17 @@
 package prestashoptest;
 
+import de.redsix.pdfcompare.PdfComparator;
 import org.hamcrest.CoreMatchers;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
+import org.openqa.selenium.By;
 import pages.presta_shop_pages.*;
+import utils.FileDownloader;
+
+import java.io.File;
+import java.io.IOException;
+
 
 public class PrestaShop extends BasicPrestaShopUI {
 
@@ -163,5 +170,82 @@ public class PrestaShop extends BasicPrestaShopUI {
                 o -> Assert.assertEquals("http://automationpractice.com/index.php", getDriver().getCurrentUrl()),
                 o -> Assert.assertEquals("My Store", getDriver().getTitle())
         );
+    }
+
+    @Test
+    public void buyGoods(){
+        //arrange
+        MainPage mainPage = new MainPage(driver);
+        LoginPage loginPage = new LoginPage(driver);
+        SearchPage searchPage = new SearchPage(driver);
+        MyAccount myAccount = new MyAccount(driver);
+        HistoryOrdersPage historyOrdersPage = new HistoryOrdersPage(driver);
+        //act
+        mainPage.clickOnLoginBtn();
+        loginPage.fillLogInForm("8767915@mail.com", "Qwerty0123456789");
+        mainPage.searchFor("Printed Chiffon Dress");
+        mainPage.clickOnSearchBtn();
+        String search_result = searchPage.verifySearchResult();
+        searchPage.hoverOnProductChiffonDress();
+        mainPage.clickOnAddToCartBtn();
+        String cart_title = mainPage.OpenCartAndVerifyTitle();
+        searchPage.clickOnCheckoutBtn();
+        searchPage.proceedAdresse();
+        searchPage.proceedShiping();
+        searchPage.clickOnPayByBank();
+        searchPage.clickOnConfirmOrderBtn();
+        mainPage.clickOnAccountBtn();
+        myAccount.openOrder();
+        historyOrdersPage.verifyAndClickOnDetailsBtnOfNewGoods();
+        historyOrdersPage.moveToOrderDetailTable();
+        historyOrdersPage.verifyColumnProductThatContainsNewGoodsName();
+        //assert
+        Assert.assertThat(search_result, CoreMatchers.containsString("PRINTED CHIFFON DRESS"));
+        Assert.assertThat(cart_title, CoreMatchers.containsString("SHOPPING-CART SUMMARY"));
+    }
+
+    @Test
+    public void verifyFacebookFrame(){
+        //arrange
+        MainPage mainPage = new MainPage(driver);
+        //act
+        mainPage.moveToFacebookFrame();
+        mainPage.verifyFrameFacebook();
+    }
+
+    @Test
+    public void verifyDownloadMyOrder() throws Exception {
+        MainPage mainPage = new MainPage(driver);
+        LoginPage loginPage = new LoginPage(driver);
+        MyAccount myAccount = new MyAccount(driver);
+     //   HistoryOrdersPage historyOrdersPage = new HistoryOrdersPage(driver);
+        FileDownloader fileDownloader = new FileDownloader(driver);
+
+        //act
+        mainPage.clickOnLoginBtn();
+        loginPage.fillLogInForm("8767915@mail.com", "Qwerty0123456789");
+        mainPage.clickOnAccountBtn();
+        myAccount.openOrder();
+
+        fileDownloader.setURI($(By.xpath("//*[@id=\"order-list\"]/tbody/tr/td[6]/a")).getAttribute("href"));
+        File actualFile = fileDownloader.downloadFile();
+        int requestStatus = fileDownloader.getLastDownloadHTTPStatus();
+        assertAll(o -> Assert.assertThat("Check status.", requestStatus, CoreMatchers.is(200)),
+                o -> {
+                    try {
+                        Assert.assertThat(new PdfComparator(new File("IN147735.pdf"), actualFile)
+                                .compare().writeTo("diffOutputOrder"), CoreMatchers.is(true));
+                    } catch (IOException e) {
+                       throw new AssertionError(e.getMessage());
+                    }
+                });
+    }
+
+    @Test
+    public void verifyInputText(){
+        SearchPage searchPage = new SearchPage(driver);
+        searchPage.fillTheSearchField();
+        String input_text = searchPage.verifyFilledText();
+        Assert.assertThat(input_text, CoreMatchers.containsString("LalaLA"));
     }
 }

@@ -1,0 +1,25 @@
+[INFO ] | 2020-01-22 17:09:17 | (BasicPrestaShopUI.java:44) - Test 'contactUs' - STARTED
+[DEBUG] | 2020-01-22 17:09:22 | (BasicPrestaShopUI.java:29) - WebDriver is ready for run test
+[INFO ] | 2020-01-22 17:09:22 | (EventListener.java:18) - Navigated to:'http://automationpractice.com/index.php'
+[DEBUG] | 2020-01-22 17:09:26 | (EventListener.java:24) - Trying to find by: By.xpath: //*[@title= 'fb:like_box Facebook Social Plugin']
+[DEBUG] | 2020-01-22 17:09:26 | (EventListener.java:24) - Trying to find by: By.xpath: //*[@class= 'login']
+[DEBUG] | 2020-01-22 17:09:26 | (EventListener.java:32) - Trying to click on: by xpath: //*[@class= 'login']
+[DEBUG] | 2020-01-22 17:09:28 | (EventListener.java:24) - Trying to find by: By.id: email
+[DEBUG] | 2020-01-22 17:09:28 | (EventListener.java:37) - Trying to send keys [8767915@mail.com] for : by id: email
+[DEBUG] | 2020-01-22 17:09:28 | (EventListener.java:24) - Trying to find by: By.id: passwd
+[DEBUG] | 2020-01-22 17:09:28 | (EventListener.java:37) - Trying to send keys [Qwerty0123456789] for : by id: passwd
+[DEBUG] | 2020-01-22 17:09:28 | (EventListener.java:24) - Trying to find by: By.id: SubmitLogin
+[DEBUG] | 2020-01-22 17:09:28 | (EventListener.java:32) - Trying to click on: by id: SubmitLogin
+[DEBUG] | 2020-01-22 17:09:30 | (EventListener.java:24) - Trying to find by: By.id: contact-link
+[DEBUG] | 2020-01-22 17:09:30 | (EventListener.java:32) - Trying to click on: by id: contact-link
+[DEBUG] | 2020-01-22 17:09:49 | (EventListener.java:24) - Trying to find by: By.xpath: //*[@value= '1']
+[DEBUG] | 2020-01-22 17:09:49 | (EventListener.java:32) - Trying to click on: by xpath: //*[@value= '1']
+[DEBUG] | 2020-01-22 17:09:49 | (EventListener.java:24) - Trying to find by: By.id: message
+[DEBUG] | 2020-01-22 17:09:49 | (EventListener.java:37) - Trying to send keys [test TEST Test TeSt tEsT teST TEst] for : by id: message
+[DEBUG] | 2020-01-22 17:09:49 | (EventListener.java:24) - Trying to find by: By.id: fileUpload
+[DEBUG] | 2020-01-22 17:09:49 | (EventListener.java:37) - Trying to send keys [C:\Users\roman.korotkov\IdeaProjects\automatedtests\TestData.txt] for : by id: fileUpload
+[DEBUG] | 2020-01-22 17:09:49 | (EventListener.java:24) - Trying to find by: By.id: submitMessage
+[DEBUG] | 2020-01-22 17:09:49 | (EventListener.java:32) - Trying to click on: by id: submitMessage
+[DEBUG] | 2020-01-22 17:09:51 | (EventListener.java:24) - Trying to find by: By.xpath: //*[@class= 'alert alert-success']
+[INFO ] | 2020-01-22 17:09:51 | (BasicPrestaShopUI.java:49) - Test 'contactUs' - PASSED
+[DEBUG] | 2020-01-22 17:09:52 | (BasicPrestaShopUI.java:66) - ChromeDriver has been shut down

@@ -14,6 +14,8 @@ public class MainPage extends BasePage {
         super(driver);
     }
 
+    private By search_btn = By.xpath("//*[@type= 'submit']");
+
     private By loginButton = By.xpath("//*[@class= 'login']");
     private By error_msg = By.xpath("//ol/li[contains(text(),'Authentication failed.')]");
 
@@ -25,6 +27,22 @@ public class MainPage extends BasePage {
 
     private By logout_btn = By.xpath("//*[@title= 'Log me out']");
     private By out_header = By.xpath("//h1");
+
+    private By add_to_cart_btn = By.xpath("//*[@title= 'Add to cart']");
+
+    private By open_cart = By.xpath("//*[@title= 'View my shopping cart']");
+    private By cart_title = By.id("cart_title");
+
+    private By account_btn = By.xpath("//*[@class= 'account']");
+
+    private By frame_title = By.xpath("//title[contains (text(), 'Facebook')]");
+
+    private By iframe_facebook = By.xpath("//*[@title= 'fb:like_box Facebook Social Plugin']");
+    WebElement iframe_facebook_element = driver.findElement(iframe_facebook);
+
+    public void clickOnSearchBtn(){
+        $(search_btn, CLICKABLE).click();
+    }
 
     public void clickOnLoginBtn() {
         $(loginButton, CLICKABLE).click();
@@ -55,6 +73,19 @@ public class MainPage extends BasePage {
         return conditionWaiter(CustomCondition.attributeContains(firstTip, "class", "ac_over"));
     }
 
+    public void clickOnAddToCartBtn(){
+        $(add_to_cart_btn, CLICKABLE).click();
+    }
+
+    public void clickOnAccountBtn(){
+        $(account_btn, CLICKABLE).click();
+    }
+
+    public String OpenCartAndVerifyTitle(){
+        $(open_cart, CLICKABLE).click();
+        return $(cart_title, VISIBLE).getText();
+    }
+
     public Boolean getCurrentPageUrlAndTitle(){
         return conditionWaiter(PageLoadedCondition.pageLoaded("http://automationpractice.com/index.php", "My Store"));
     }
@@ -63,6 +94,15 @@ public class MainPage extends BasePage {
         $(searchInput, CLICKABLE).click();
         $(searchInput, PRESENCE).clear();
         $(searchInput, PRESENCE).sendKeys(query);
+    }
+
+    public void moveToFacebookFrame(){
+        executeScript("arguments[0].scrollIntoView(true);", $("//*[@id= 'facebook_block']"));
+    }
+
+    public void verifyFrameFacebook(){
+        getDriver().switchTo().frame(iframe_facebook_element);
+        $(frame_title, PRESENCE);
     }
 
     //See test verifySecondTextInSearch (ImplicitWait)

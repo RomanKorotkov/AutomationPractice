@@ -1,0 +1,3 @@
+[INFO ] | 2020-01-22 17:09:17 | (BasicPrestaShopUI.java:44) - Test 'contactUs' - STARTED
+[INFO ] | 2020-01-22 17:09:22 | (EventListener.java:18) - Navigated to:'http://automationpractice.com/index.php'
+[INFO ] | 2020-01-22 17:09:51 | (BasicPrestaShopUI.java:49) - Test 'contactUs' - PASSED

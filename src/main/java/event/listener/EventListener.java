@@ -9,10 +9,8 @@ import org.openqa.selenium.support.events.AbstractWebDriverEventListener;
 
 import java.util.Arrays;
 
-
-
-
 public class EventListener extends AbstractWebDriverEventListener {
+
     public static final Logger LOGGER = LogManager.getLogger(EventListener.class);
 
     @Override
